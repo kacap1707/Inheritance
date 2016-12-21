@@ -16,6 +16,11 @@ namespace FinancialInstitution
         }
         public long Assets { get; set; }
         public long Liabilities { get; set; }
-        public const long StatutoryCapitalMinimumForArmenia = 30000000000;
+
+        public enum StatutoryCapitalMinimum : long
+        {
+            StatutroyCapitalMinimumOldVersion = 5000000000,
+            StatutoryCapitalMinimumForArmeniaFrom010117 = 30000000000
+        }
     }
 }

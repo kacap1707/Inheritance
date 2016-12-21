@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -69,6 +71,26 @@ namespace FinancialInstitution
             #endregion
             var appa = new List<InsuranceCompany> { ic1, ic2, ic3 };
 
+            #region Queries
+            var whichBankDoesnotMatchNewLaw = from bank in cba
+                                              where bank.statutoryCapital < (long)Bank.StatutoryCapitalMinimum.StatutoryCapitalMinimumForArmeniaFrom010117
+                                              select bank;
+            foreach (var bank in whichBankDoesnotMatchNewLaw)
+                Console.WriteLine($"{bank.name} doesn't match new armenian law about banks and has to increase its statutory capital");
+
+            var howMuchPeopleAreEmployedInInsuranceCompanies = appa.Select(x => x.totalEmployeeCount).Sum();
+            Console.WriteLine($"\nInsurance sector provides {howMuchPeopleAreEmployedInInsuranceCompanies} working places in Armenia");
+
+            var whichCOcouldBeBankByAncientLaw =
+                uvk.Where(u => u.statutoryCapital >= (long)Bank.StatutoryCapitalMinimum.StatutroyCapitalMinimumOldVersion);
+            if (whichCOcouldBeBankByAncientLaw.ToList().Count == 0)
+                Console.WriteLine("\nThere is no such credit organization");
+            else
+            {
+                foreach (var creditOrganization in whichCOcouldBeBankByAncientLaw)
+                    Console.WriteLine($"\n{creditOrganization.name} could be bank if not this new shitty law");
+            }
+            #endregion
         }
     }
 }
