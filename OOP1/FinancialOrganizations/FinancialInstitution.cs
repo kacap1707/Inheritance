@@ -4,21 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinancialInstitution
+namespace FinancialOrganizations
 {
-    class FinancialInstitution
+    public abstract class FinancialInstitution
     {
-        public FinancialInstitution(string name, string adress, long statutoryCapital)
-        {
-            this.name = name;
-            this.adress = adress;
-            this.statutoryCapital = statutoryCapital;
-        }
-
-        public FinancialInstitution()
-        {
-        }
-
         public string name = string.Empty;
         public string adress = string.Empty;
         public long statutoryCapital;  // statutory capital = կանոնադրական կապիտալ
