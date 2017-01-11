@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ThreeDimensionalForms
+﻿namespace ThreeDimensionalForms
 {
     public abstract class ThreeDShape
     {
