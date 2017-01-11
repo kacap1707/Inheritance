@@ -6,9 +6,10 @@ In #FinancialOrganizations folder you'll see a basic FinancialInstitution class 
 All those institutions inherite all fields, properties and methods from base class. Meanwhile, they also add their own specific states and functionalities.
 
 For example:  
-```javascript  public long Assets { get; set; }
-               public long Liabilities { get; set; } 
-            ```
+```javascript
+public long Assets { get; set; }
+public long Liabilities { get; set; } 
+```
 these properties are particular for Banks, so we add them in derived class(Bank).
 
 In TestingPolygon, the client adds our class library reference in his/her project and employs.
