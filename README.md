@@ -7,7 +7,7 @@ All those institutions inherite all fields, properties and methods from base cla
 
 For example:  
  ```csharp  public long Assets { get; set; }
-            public long Liabilities { get; set; } ```csharp
+            public long Liabilities { get; set; } ```
 these properties are particular for Banks, so we add them in derived class(Bank).
 
 In TestingPolygon, the client adds our class library reference in his/her project and employs.
