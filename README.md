@@ -2,7 +2,7 @@
 
 Here are some good examples explaining the process of inheritance in C#.
 
-In #FinancialOrganizations folder you'll see a basic FinancialInstitution class which will "give birth" to banks, credit organizations and insurance companies.
+In #FinancialOrganizations folder you'll see a basic FinancialInstitution class which will "give birth" to `Bank`s, `Credit organization`s and `Insurance company`ies.
 All those institutions inherite all fields, properties and methods from base class. Meanwhile, they also add their own specific states and functionalities.
 
 For example:  
