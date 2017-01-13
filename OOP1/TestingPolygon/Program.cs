@@ -100,6 +100,7 @@ namespace TestingPolygon
             Console.WriteLine($"Ellipsoid volume: {ellispe.Volume}");
             Console.WriteLine($"Ellipsoid surface: {ellispe.Surface}");
 
+            //Delay
             Console.ReadKey();
         }
     }
